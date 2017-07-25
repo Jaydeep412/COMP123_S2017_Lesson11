@@ -7,7 +7,7 @@ using System.Text;
  * Name : Jaydeep Lakhwani
  * Date : 25th July, 2017
  * Description : This is the Deck class which inhertis from Card list
- * Version 0.1 - Created the Deck Class.
+ * Version 0.3 - Fixed bug in ToString method
  */
 
 namespace COMP123_S2017_Lesson11
@@ -21,15 +21,15 @@ namespace COMP123_S2017_Lesson11
         //CONSTRUCTOR
         public Deck()
         {
-            this.initialize();
+            this._initialize();
         }
         //PRIVATE METHODS
 
-        private void initialize()
+        private void _initialize()
         {
-            for (int suit=0; suit< (int)Suit.Spades; suit++)
+            for (int suit=0; suit<= (int)Suit.Spades; suit++)
             {
-                for (int face = 0; face < (int)Face.King; face++)
+                for (int face = 1; face <= (int)Face.King; face++)
                 {
                     this.Add(new Card((Face)face,(Suit)suit));
                 }
@@ -46,7 +46,7 @@ namespace COMP123_S2017_Lesson11
             string outString="";
             foreach(Card card in this)
             {
-                outString = "The" + card.Face + "of" + card.Suit + "\n";
+                outString += "The" + card.Face + "of" + card.Suit + "\n";
             }
             return outString;
         }
