@@ -3,6 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
+ * Name : Jaydeep Lakhwani
+ * Date : 25th July, 2017
+ * Description : This is the Card class to be used in the card
+ * shuffling and dealing simulation
+ * Version 0.1 - Created the Card Class.
+ */
+
+
 namespace COMP123_S2017_Lesson11
 {
     public class Card
